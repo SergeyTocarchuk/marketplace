@@ -1,0 +1,55 @@
+Arguments: 
+  /Users/serhii/.nvs/node/19.7.0/arm64/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js build
+
+PATH: 
+  /Users/serhii/.nvs/node/19.7.0/arm64/bin:/Users/serhii/.pyenv/shims:/Users/serhii/.rbenv/shims:/Users/serhii/.rbenv/bin:/usr/local/opt/libpq/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.7.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/serhii/courses/rails/marketplace/package.json: Expected double-quoted property name in JSON at position 51
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "marketplace",
+    "version": "1.0.0",
+    // "repository": "https://github.com/SergeyTocarchuk/clinica_app",
+    "scripts": {
+      "up": "docker-compose up",
+      "stop": "docker-compose stop",
+      "down": "docker-compose down",
+      "build": "docker-compose up --build",
+  
+      "bash": "docker-compose exec app bash",
+      "c": "docker-compose exec app rails c",
+      "routes": "docker-compose exec app rails routes",
+  
+      "db:seed": "docker-compose exec app rails db:seed",
+      "db:reset": "docker-compose exec app rails db:reset",
+      "db:migrate": "docker-compose exec app rails db:migrate",
+      "db:rollback": "docker-compose exec app rails db:rollback",
+  
+      "annotate": "docker-compose exec app bundle exec annotate",
+  
+      "rubocop": "docker-compose exec app rubocop",
+      "rspec": "docker compose exec -e RAILS_ENV=test app bundle exec rspec"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

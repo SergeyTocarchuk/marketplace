@@ -1,0 +1,15 @@
+<ul>
+  <li>First name: <%= @trader.first_name %></li>
+  <li>Last name: <%= @trader.last_name %></li>
+  <li>Phone: <%= @trader.phone %></li>
+  <li>E-mail: <%= @trader.email %></li>
+</ul>
+
+<div>
+  <%= form_with(url: chats_path, method: :post) do |form| %>
+    <%= form.hidden_field :user_id, value: User.first.id %>
+    <%= form.hidden_field :trader_id, value: Trader.first.id %>
+    
+    <%= form.submit "Submit" %>
+  <% end %>
+</div>
