@@ -1,14 +1,9 @@
 class ChatsController < ApplicationController
 
   def create
-    byebug
     @chat = Chat.create(chat_params)
 
-    redirect_to chat_path(@chat)
-  end
-
-  def show
-
+    redirect_to chat_messages_path(@chat)
   end
 
   private

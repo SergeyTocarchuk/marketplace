@@ -12,6 +12,6 @@
 #
 class User < ApplicationRecord
 
-  has_many :messages, as: :messageable
+  has_many :messages, as: :messagable
 
 end

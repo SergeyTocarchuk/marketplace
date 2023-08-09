@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ruby:3.1.4-slim as base
+FROM ruby:3.0.6-slim as base
 
 ################################################################################
 # Create a stage for building/compiling the application.
