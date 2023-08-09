@@ -13,7 +13,7 @@
 # Indexes
 #
 #  index_messages_on_chat_id     (chat_id)
-#  index_messages_on_messagable  (messagable_type, messagable_id)
+#  index_messages_on_messagable  (messagable_type,messagable_id)
 #
 # Foreign Keys
 #

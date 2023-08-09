@@ -7,8 +7,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @user = User.first
-    @user.messages.create(message_params.merge(chat: @chat))
+    byebug
+    current_user.messages.create(message_params.merge(chat: @chat))
 
     redirect_to chat_messages_path(@chat)
   end

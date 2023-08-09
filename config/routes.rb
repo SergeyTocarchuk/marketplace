@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :traders
+  devise_for :users
+
+  root to: "pages#home"
 
   resources :traders, only: %i[show]
   resources :users, only: %i[show]
