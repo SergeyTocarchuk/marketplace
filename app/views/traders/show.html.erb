@@ -7,8 +7,7 @@
 
 <div>
   <%= form_with(url: chats_path, method: :post) do |form| %>
-    <%= form.hidden_field :user_id, value: User.first.id %>
-    <%= form.hidden_field :trader_id, value: Trader.first.id %>
+    <%= form.hidden_field :trader_id, value: @trader.id %>
     
     <%= form.submit "Start chat" %>
   <% end %>

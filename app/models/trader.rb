@@ -28,6 +28,7 @@ class Trader < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :messages, as: :messageable
+  has_many :chats, dependent: :destroy
+  has_many :messages, as: :messagable
 
 end

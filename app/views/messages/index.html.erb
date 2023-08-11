@@ -1,4 +1,4 @@
-<div>
+<div id="messages">
   <% @messages.each do |message| %>
     <p><%= message.messagable.first_name %>: <%= message.content %></p>
   <% end %>

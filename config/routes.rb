@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :traders
   devise_for :users
 
+  mount ActionCable.server => '/cable'
+
   root to: "pages#home"
 
   resources :traders, only: %i[show]

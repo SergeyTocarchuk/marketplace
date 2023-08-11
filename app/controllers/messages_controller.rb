@@ -7,10 +7,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    byebug
-    current_user.messages.create(message_params.merge(chat: @chat))
+    participant = current_user || current_trader
+    participant.messages.create(message_params.merge(chat: @chat))
 
-    redirect_to chat_messages_path(@chat)
+    ActionCable.server.broadcast('chats/2', { message: params[:content] })
   end
 
   private

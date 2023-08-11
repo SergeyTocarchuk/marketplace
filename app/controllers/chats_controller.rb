@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
 
   def create
-    @chat = Chat.create(chat_params)
+    @chat = current_user.chats.create(chat_params)
 
     redirect_to chat_messages_path(@chat)
   end
@@ -9,7 +9,7 @@ class ChatsController < ApplicationController
   private
 
   def chat_params
-    params.permit(:trader_id, :user_id)
+    params.permit(:trader_id)
   end
 
 end
