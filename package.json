@@ -7,18 +7,14 @@
     "stop": "docker-compose stop",
     "down": "docker-compose down",
     "build": "docker-compose up --build",
-
     "bash": "docker-compose exec app bash",
     "c": "docker-compose exec app rails c",
     "routes": "docker-compose exec app rails routes",
-
     "db:seed": "docker-compose exec app rails db:seed",
     "db:reset": "docker-compose exec app rails db:reset",
     "db:migrate": "docker-compose exec app rails db:migrate",
     "db:rollback": "docker-compose exec app rails db:rollback",
-
     "annotate": "docker-compose exec app bundle exec annotate",
-
     "rubocop": "docker-compose exec app rubocop",
     "rspec": "docker compose exec -e RAILS_ENV=test app bundle exec rspec"
   }

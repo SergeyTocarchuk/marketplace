@@ -8,9 +8,9 @@ class MessagesController < ApplicationController
 
   def create
     participant = current_user || current_trader
-    participant.messages.create(message_params.merge(chat: @chat))
+    message = participant.messages.create(message_params.merge(chat: @chat))
 
-    ActionCable.server.broadcast('chats/2', { message: params[:content] })
+    ActionCable.server.broadcast('chats/1', { message: message })
   end
 
   private
