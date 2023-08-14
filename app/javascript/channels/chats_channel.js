@@ -1,6 +1,8 @@
 import consumer from "./consumer"
 
-consumer.subscriptions.create("ChatsChannel", {
+let chatsSubscription;
+
+chatsSubscription = consumer.subscriptions.create("ChatsChannel", {
   connected() {},
 
   disconnected() {},
@@ -9,3 +11,7 @@ consumer.subscriptions.create("ChatsChannel", {
     document.getElementById('new_message').innerHTML += `<p>${data.message.content}</p>`;
   }
 })
+
+window.addEventListener("beforeunload", function () {
+  consumer.subscriptions.remove(chatsSubscription);
+});
