@@ -1,4 +1,4 @@
-<div>
+<div id="chat_messages" data-chat-id="<%= @chat.id %>" data-customer-id="<%= @current_customer.id %>">
   <% @messages.each do |message| %>
     <p><%= message.content %></p>
   <% end %>

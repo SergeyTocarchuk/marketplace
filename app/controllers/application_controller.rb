@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
-  # before_action :authenticate_user_or_trader!
+  def current_customer
+    @current_customer = current_trader || current_user
+  end
 
 end

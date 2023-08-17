@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
 
   before_action :set_chat
+  before_action :current_customer
 
   def index
     @messages = @chat.messages
