@@ -33,5 +33,13 @@ services:
     depends_on:
       - db
       - redis
+  tailwindcss:
+    build:
+      context: .
+    command: bundle exec rails tailwindcss:watch
+    volumes:
+      - .:/home/www/rails-app:rw
+      - /home/www/rails-app/tmp/cache/bootsnap
+      - /home/www/rails-app/node_modules
 volumes:
   postgres-data:
